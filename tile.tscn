@@ -9,6 +9,6 @@ specular_color = Color(0, 0, 0, 1)
 [node name="tile" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.49997, 2.28882e-05)
-scale = Vector2(171, 93.6586)
+position = Vector2(125, 2.28882e-05)
+scale = Vector2(418, 93.6586)
 texture = SubResource("CanvasTexture_vx4y2")
