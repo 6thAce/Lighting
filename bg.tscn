@@ -5,10 +5,12 @@
 [node name="Bg" type="Node2D"]
 
 [node name="tile" parent="." instance=ExtResource("1_t4gw0")]
-position = Vector2(624, 171)
+position = Vector2(695, 129)
+rotation = 0.47822
 
 [node name="tile2" parent="." instance=ExtResource("1_t4gw0")]
-position = Vector2(146, 171)
+position = Vector2(193, 119)
+rotation = -0.120428
 
 [node name="tile3" parent="." instance=ExtResource("1_t4gw0")]
 position = Vector2(-295, 608)
