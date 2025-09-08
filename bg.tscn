@@ -23,3 +23,7 @@ position = Vector2(526, 609)
 
 [node name="tile6" parent="." instance=ExtResource("1_t4gw0")]
 position = Vector2(943, 610)
+
+[node name="tile7" parent="." instance=ExtResource("1_t4gw0")]
+position = Vector2(1000, 364)
+rotation = -1.5708
