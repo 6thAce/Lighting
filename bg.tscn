@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://kpba83e05j1y" path="res://tile.tscn" id="1_t4gw0"]
 
 [node name="Bg" type="Node2D"]
+position = Vector2(196, -75)
 
 [node name="tile" parent="." instance=ExtResource("1_t4gw0")]
 position = Vector2(695, 129)
