@@ -1,8 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://o7jfbb7oipr0"]
+[gd_scene load_steps=5 format=3 uid="uid://o7jfbb7oipr0"]
 
 [ext_resource type="PackedScene" uid="uid://8hchqirgpejc" path="res://bg.tscn" id="1_ulcgi"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ulcgi"]
+polygon = PackedVector2Array(-130, 576, 1439, 582, 1441, 675, -133, 667, -132, 855, -227, 859, -223, 530, -542, 531, -539, 434, -124, 436)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nxogm"]
+polygon = PackedVector2Array(-232, 210, -163, 274, -85, 191, 303, 190, 690, 141, 680, 48, 288, 97, 1, 95, 118, -36, 47, -103)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3253y"]
+polygon = PackedVector2Array(760, 148, 804, 65, 1114, 226, 1115, 46, 1210, 47, 1211, 465, 1114, 465, 1116, 330)
 
 [node name="Scene" type="Node2D"]
 
 [node name="Bg" parent="." instance=ExtResource("1_ulcgi")]
 position = Vector2(163, 16)
+
+[node name="LightOccluder" type="Node2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder"]
+occluder = SubResource("OccluderPolygon2D_ulcgi")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="LightOccluder"]
+occluder = SubResource("OccluderPolygon2D_nxogm")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="LightOccluder"]
+occluder = SubResource("OccluderPolygon2D_3253y")
