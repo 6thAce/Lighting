@@ -9,12 +9,14 @@ polygon = PackedVector2Array(-130, 576, 1439, 582, 1441, 675, -133, 667, -132, 8
 polygon = PackedVector2Array(-232, 210, -163, 274, -85, 191, 303, 190, 690, 141, 680, 48, 288, 97, 1, 95, 118, -36, 47, -103)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3253y"]
-polygon = PackedVector2Array(760, 148, 804, 65, 1114, 226, 1115, 46, 1210, 47, 1211, 465, 1114, 465, 1116, 330)
+polygon = PackedVector2Array(760, 148, 804, 65, 1114, 226, 1120, -77, 1213, -76, 1210, 340, 1118, 337, 1116, 330)
 
 [sub_resource type="Gradient" id="Gradient_ulcgi"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_nxogm"]
 gradient = SubResource("Gradient_ulcgi")
+fill_from = Vector2(0.229358, 0.426605)
+fill_to = Vector2(1, 0.701835)
 
 [node name="Scene" type="Node2D"]
 
@@ -33,9 +35,9 @@ occluder = SubResource("OccluderPolygon2D_nxogm")
 occluder = SubResource("OccluderPolygon2D_3253y")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(470, 420)
-scale = Vector2(5.49582, 3.82708)
-blend_mode = 2
+position = Vector2(870, 492)
+scale = Vector2(7.99834, 3.82708)
+energy = 4.35
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_nxogm")
 texture_scale = 4.33

@@ -5,6 +5,13 @@
 [node name="Bg" type="Node2D"]
 position = Vector2(196, -75)
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -743.0
+offset_top = -134.0
+offset_right = 1327.0
+offset_bottom = 851.0
+color = Color(0.230315, 0.230315, 0.230315, 1)
+
 [node name="tile" parent="." instance=ExtResource("1_t4gw0")]
 position = Vector2(695, 129)
 rotation = 0.47822
@@ -26,7 +33,7 @@ position = Vector2(526, 609)
 position = Vector2(943, 610)
 
 [node name="tile7" parent="." instance=ExtResource("1_t4gw0")]
-position = Vector2(1000, 364)
+position = Vector2(1000, 240)
 rotation = -1.5708
 
 [node name="tile8" parent="." instance=ExtResource("1_t4gw0")]
