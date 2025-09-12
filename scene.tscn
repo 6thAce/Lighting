@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://o7jfbb7oipr0"]
+[gd_scene load_steps=9 format=3 uid="uid://o7jfbb7oipr0"]
 
 [ext_resource type="PackedScene" uid="uid://8hchqirgpejc" path="res://bg.tscn" id="1_ulcgi"]
 
@@ -18,6 +18,13 @@ gradient = SubResource("Gradient_ulcgi")
 fill_from = Vector2(0.229358, 0.426605)
 fill_to = Vector2(1, 0.701835)
 
+[sub_resource type="Gradient" id="Gradient_nxogm"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3253y"]
+gradient = SubResource("Gradient_nxogm")
+fill_from = Vector2(0.472477, 1)
+fill_to = Vector2(0.495413, 0.0183486)
+
 [node name="Scene" type="Node2D"]
 
 [node name="Bg" parent="." instance=ExtResource("1_ulcgi")]
@@ -35,9 +42,15 @@ occluder = SubResource("OccluderPolygon2D_nxogm")
 occluder = SubResource("OccluderPolygon2D_3253y")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(870, 492)
+position = Vector2(1224, 492)
 scale = Vector2(7.99834, 3.82708)
 energy = 4.35
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_nxogm")
 texture_scale = 4.33
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(749, 50)
+scale = Vector2(11.9141, 12.0469)
+energy = 5.0
+texture = SubResource("GradientTexture2D_3253y")
