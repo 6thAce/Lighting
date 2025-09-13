@@ -23,7 +23,8 @@ fill_to = Vector2(1, 0.701835)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3253y"]
 gradient = SubResource("Gradient_nxogm")
-fill_from = Vector2(0, 1)
+fill_from = Vector2(0.0733945, 0.541284)
+fill_to = Vector2(0.866973, 0.206422)
 
 [node name="Scene" type="Node2D"]
 
@@ -42,16 +43,16 @@ occluder = SubResource("OccluderPolygon2D_nxogm")
 occluder = SubResource("OccluderPolygon2D_3253y")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1245, 426)
+position = Vector2(1435, 437)
 scale = Vector2(7.99834, 3.82708)
-energy = 4.35
+energy = 1.45
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_nxogm")
 texture_scale = 4.33
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(776, 81)
-scale = Vector2(16.0049, 16.1611)
+position = Vector2(791, -94)
+scale = Vector2(16.0049, 30.7512)
 energy = 3.32
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_3253y")
