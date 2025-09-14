@@ -27,11 +27,15 @@ fill_from = Vector2(0.0733945, 0.541284)
 fill_to = Vector2(0.866973, 0.206422)
 
 [node name="Scene" type="Node2D"]
+position = Vector2(219, 141)
 
 [node name="Bg" parent="." instance=ExtResource("1_ulcgi")]
 position = Vector2(163, 16)
+scale = Vector2(0.75, 0.75)
 
 [node name="LightOccluder" type="Node2D" parent="."]
+position = Vector2(41, 3)
+scale = Vector2(0.75, 0.75)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder"]
 occluder = SubResource("OccluderPolygon2D_ulcgi")
@@ -43,15 +47,15 @@ occluder = SubResource("OccluderPolygon2D_nxogm")
 occluder = SubResource("OccluderPolygon2D_3253y")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1435, 437)
-scale = Vector2(7.99834, 3.82708)
+position = Vector2(1177, 349)
+scale = Vector2(8.47377, 3.82708)
 energy = 1.45
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_nxogm")
 texture_scale = 4.33
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(791, -94)
+position = Vector2(659, -34)
 scale = Vector2(16.0049, 30.7512)
 energy = 3.32
 shadow_enabled = true
