@@ -9,7 +9,7 @@ polygon = PackedVector2Array(-130, 576, 1439, 582, 1441, 675, -133, 667, -132, 8
 polygon = PackedVector2Array(-232, 210, -163, 274, -85, 191, 303, 190, 690, 141, 680, 48, 288, 97, 1, 95, 118, -36, 47, -103)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3253y"]
-polygon = PackedVector2Array(760, 148, 804, 65, 1114, 226, 1120, -77, 1213, -76, 1210, 340, 1118, 337, 1116, 330)
+polygon = PackedVector2Array(760, 148, 804, 65, 1114, 226, 1120, -77, 1228, -78, 1227, 340, 1133, 340, 1116, 330)
 
 [sub_resource type="Gradient" id="Gradient_ulcgi"]
 
