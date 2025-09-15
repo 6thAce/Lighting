@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://o7jfbb7oipr0"]
+[gd_scene load_steps=11 format=3 uid="uid://o7jfbb7oipr0"]
 
 [ext_resource type="PackedScene" uid="uid://8hchqirgpejc" path="res://bg.tscn" id="1_ulcgi"]
 [ext_resource type="PackedScene" uid="uid://c2xegl4eys6ia" path="res://player.tscn" id="2_nxogm"]
@@ -27,6 +27,8 @@ gradient = SubResource("Gradient_nxogm")
 fill_from = Vector2(0.0733945, 0.541284)
 fill_to = Vector2(0.866973, 0.206422)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nxogm"]
+
 [node name="Scene" type="Node2D"]
 position = Vector2(219, 141)
 
@@ -48,8 +50,9 @@ occluder = SubResource("OccluderPolygon2D_nxogm")
 occluder = SubResource("OccluderPolygon2D_3253y")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1177, 349)
+position = Vector2(1191, 349)
 scale = Vector2(8.47377, 3.82708)
+color = Color(0.807843, 1, 1, 1)
 energy = 1.45
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_nxogm")
@@ -58,6 +61,7 @@ texture_scale = 4.33
 [node name="PointLight2D2" type="PointLight2D" parent="."]
 position = Vector2(659, -34)
 scale = Vector2(16.0049, 30.7512)
+color = Color(0.870588, 0.858824, 0.752941, 1)
 energy = 3.32
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_3253y")
@@ -66,13 +70,16 @@ texture = SubResource("GradientTexture2D_3253y")
 position = Vector2(-166, 270)
 scale = Vector2(0.75, 0.75)
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-533, 302)
+physics_material_override = SubResource("PhysicsMaterial_nxogm")
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Node2D"]
-build_mode = 1
-polygon = PackedVector2Array(-135, 162, -85, 208, -23, 146, 260, 146, 558, 111, 549, 36, 249, 79, 43, 77, 130, -21, 75, -73)
-
-[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Node2D"]
-position = Vector2(-148, 334)
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(385, 32)
 build_mode = 1
 polygon = PackedVector2Array(-224, -2, -220, 67, 21, 65, 18, 313, 87, 314, 91, 174, 1272, 176, 1267, 104, 95, 101, 93, -3)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(533, -302)
+build_mode = 1
+polygon = PackedVector2Array(-135, 162, -85, 208, -23, 146, 260, 146, 558, 111, 549, 36, 249, 79, 43, 77, 130, -21, 75, -73)

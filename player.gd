@@ -1,16 +1,32 @@
 extends CharacterBody2D
 
 
-# --- Character Properties ---
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 350.0
+const JUMP_VELOCITY = -500.0
+
+# --- NEW CONSTANTS FOR SMOOTHER JUMPING ---
+const FALL_MULTIPLIER = 2.0  # Make the character fall faster than they rise.
+const JUMP_CANCEL_MULTIPLIER = 0.5 # Make the character stop rising when the jump key is released.
+
+const ACCELERATION = 1200.0
+const FRICTION = 1500.0
 
 
-# --- Physics-based processing for movement ---
 func _physics_process(delta: float) -> void:
 	# Add the gravity to the vertical velocity.
 	if not is_on_floor():
-		velocity.y += get_gravity().y * delta # CORRECTED LINE HERE
+		velocity.y += get_gravity().y * delta
+
+		# ==========================================================
+		# THE SMOOTHER JUMPING LOGIC HAS BEEN ADDED HERE
+		# ==========================================================
+		# Make the jump variable (for short hops).
+		if velocity.y < 0 and not Input.is_action_pressed("ui_accept"):
+			velocity.y += get_gravity().y * (JUMP_CANCEL_MULTIPLIER) * delta
+
+		# Apply a fall multiplier to make the fall feel snappier.
+		if velocity.y > 0:
+			velocity.y += get_gravity().y * (FALL_MULTIPLIER - 1) * delta
 
 	# Handle jump input.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -19,20 +35,14 @@ func _physics_process(delta: float) -> void:
 	# Get the horizontal input direction.
 	var direction := Input.get_axis("ui_left", "ui_right")
 
-	# If there is a horizontal input:
 	if direction:
-		# Set the horizontal velocity directly to the target speed.
-		velocity.x = direction * SPEED
+		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION * delta)
 		
-		# Flip the sprite based on the movement direction.
-		# The '$' is a shorthand to get a child node by its name.
 		if direction > 0:
-			$Sprite2D.flip_h = false  # Face right
+			$Sprite2D.flip_h = false
 		else:
-			$Sprite2D.flip_h = true   # Face left
+			$Sprite2D.flip_h = true
 	else:
-		# If no input, slow the character to a stop.
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
 
-	# Apply the velocity and handle collisions.
 	move_and_slide()
