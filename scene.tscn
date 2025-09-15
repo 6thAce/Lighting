@@ -63,5 +63,16 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_3253y")
 
 [node name="Player" parent="." instance=ExtResource("2_nxogm")]
-position = Vector2(-168, 271)
+position = Vector2(-166, 270)
 scale = Vector2(0.75, 0.75)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Node2D"]
+build_mode = 1
+polygon = PackedVector2Array(-135, 162, -85, 208, -23, 146, 260, 146, 558, 111, 549, 36, 249, 79, 43, 77, 130, -21, 75, -73)
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Node2D"]
+position = Vector2(-148, 334)
+build_mode = 1
+polygon = PackedVector2Array(-224, -2, -220, 67, 21, 65, 18, 313, 87, 314, 91, 174, 1272, 176, 1267, 104, 95, 101, 93, -3)
