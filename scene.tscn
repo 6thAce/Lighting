@@ -87,7 +87,7 @@ polygon = PackedVector2Array(-224, -2, -220, 67, 21, 65, 18, 313, 87, 314, 91, 1
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(533, -302)
 build_mode = 1
-polygon = PackedVector2Array(41, -27, -44, 78, -42, 147, 260, 146, 558, 111, 549, 36, 554, -176, 45, -178)
+polygon = PackedVector2Array(41, -27, -44, 78, -42, 147, 260, 146, 558, 111, 549, 36, 556, -174, 41, -177)
 
 [node name="CollisionShape2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(1382, -285)
