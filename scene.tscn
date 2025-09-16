@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://c2xegl4eys6ia" path="res://player.tscn" id="2_nxogm"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ulcgi"]
-polygon = PackedVector2Array(-130, 576, 1439, 582, 1441, 675, -133, 667, -132, 855, -227, 859, -223, 530, -542, 531, -539, 434, -124, 436)
+polygon = PackedVector2Array(-130, 576, 1439, 582, 1441, 675, 1444, 954.667, -137.333, 982.667, -569.333, 976, -573.333, 513.333, -542.667, 531, -542.667, 434, -129.333, 436)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nxogm"]
-polygon = PackedVector2Array(-232, 210, -163, 274, -85, 191, 303, 190, 690, 141, 680, 48, 288, 97, 1, 95, 118, -36, 47, -103)
+polygon = PackedVector2Array(-232, 210, -163, 274, -85, 191, 303, 190, 690, 141, 680, 48, 690.667, -122.667, 6.66666, -120, 9.33331, -50.6667)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3253y"]
-polygon = PackedVector2Array(760, 148, 804, 65, 1114, 226, 1120, -77, 1228, -78, 1227, 340, 1133, 340, 1116, 330)
+polygon = PackedVector2Array(760, 148, 804, 65, 1121.33, -481.333, 1478.67, -284, 1816, -134.667, 1820, 328, 1133, 340, 1116, 330)
 
 [sub_resource type="Gradient" id="Gradient_ulcgi"]
 
@@ -21,6 +21,7 @@ fill_from = Vector2(0, 0.495413)
 fill_to = Vector2(1, 0.701835)
 
 [sub_resource type="Gradient" id="Gradient_nxogm"]
+colors = PackedColorArray(0, 0, 0, 1, 0.917647, 0.921569, 0.929412, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3253y"]
 gradient = SubResource("Gradient_nxogm")
@@ -50,20 +51,24 @@ occluder = SubResource("OccluderPolygon2D_nxogm")
 occluder = SubResource("OccluderPolygon2D_3253y")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1191, 349)
-scale = Vector2(8.47377, 3.82708)
-color = Color(0.807843, 1, 1, 1)
-energy = 1.45
+position = Vector2(1382, 331)
+scale = Vector2(12.8503, 3.82708)
+color = Color(0, 0.411765, 0.537255, 1)
+energy = 6.08
 shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 7.1
 texture = SubResource("GradientTexture2D_nxogm")
 texture_scale = 4.33
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(659, -34)
+position = Vector2(619, 11)
 scale = Vector2(16.0049, 30.7512)
-color = Color(0.870588, 0.858824, 0.752941, 1)
-energy = 3.32
+color = Color(0.917647, 0.921569, 0.929412, 1)
+energy = 3.17
 shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 1.9
 texture = SubResource("GradientTexture2D_3253y")
 
 [node name="Player" parent="." instance=ExtResource("2_nxogm")]
@@ -83,3 +88,8 @@ polygon = PackedVector2Array(-224, -2, -220, 67, 21, 65, 18, 313, 87, 314, 91, 1
 position = Vector2(533, -302)
 build_mode = 1
 polygon = PackedVector2Array(-135, 162, -85, 208, -23, 146, 260, 146, 558, 111, 549, 36, 249, 79, 43, 77, 130, -21, 75, -73)
+
+[node name="CollisionShape2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1382, -285)
+build_mode = 1
+polygon = PackedVector2Array(-206, 36, -238, 98, 46, 243, 112, 242, 114, -73, 43, -73, 42, 165, -206, 35)

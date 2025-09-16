@@ -18,18 +18,21 @@ func _physics_process(delta: float) -> void:
 		velocity.y += get_gravity().y * delta
 
 		# ==========================================================
-		# THE SMOOTHER JUMPING LOGIC HAS BEEN ADDED HERE
+		# JUMP CANCEL LOGIC NOW CHECKS FOR BOTH BUTTONS
 		# ==========================================================
 		# Make the jump variable (for short hops).
-		if velocity.y < 0 and not Input.is_action_pressed("ui_accept"):
+		if velocity.y < 0 and not (Input.is_action_pressed("UP") or Input.is_action_pressed("ui_accept")):
 			velocity.y += get_gravity().y * (JUMP_CANCEL_MULTIPLIER) * delta
 
 		# Apply a fall multiplier to make the fall feel snappier.
 		if velocity.y > 0:
 			velocity.y += get_gravity().y * (FALL_MULTIPLIER - 1) * delta
 
+	# ==========================================================
+	# JUMP INPUT NOW ACCEPTS EITHER ui_accept OR UP
+	# ==========================================================
 	# Handle jump input.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if (Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("UP")) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the horizontal input direction.

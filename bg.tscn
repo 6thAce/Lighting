@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://8hchqirgpejc"]
+[gd_scene load_steps=7 format=3 uid="uid://8hchqirgpejc"]
 
 [ext_resource type="PackedScene" uid="uid://kpba83e05j1y" path="res://tile.tscn" id="1_t4gw0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_t4gw0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_tuaf8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_e8j8q"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_iq1of"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_36ycx"]
 
 [node name="Bg" type="Node2D"]
 position = Vector2(196, -75)
@@ -10,7 +20,7 @@ offset_left = -743.0
 offset_top = -134.0
 offset_right = 1327.0
 offset_bottom = 851.0
-color = Color(0.230315, 0.230315, 0.230315, 1)
+color = Color(0.364706, 0.364706, 0.364706, 0.596078)
 
 [node name="tile" parent="." instance=ExtResource("1_t4gw0")]
 position = Vector2(695, 129)
@@ -49,3 +59,34 @@ rotation = -0.837758
 
 [node name="tile11" parent="." instance=ExtResource("1_t4gw0")]
 position = Vector2(-626, 467)
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.00784314, 0.0941176, 0.168627, 1)
+position = Vector2(485, 777.5)
+scale = Vector2(1568, 313)
+texture = SubResource("CanvasTexture_t4gw0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.00784314, 0.0941176, 0.168627, 1)
+position = Vector2(180.5, -20.3438)
+scale = Vector2(687, 224.688)
+texture = SubResource("CanvasTexture_tuaf8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.00784314, 0.0941176, 0.168627, 1)
+position = Vector2(1313.43, 80.0719)
+scale = Vector2(-662.923, 469.28)
+texture = SubResource("CanvasTexture_e8j8q")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+modulate = Color(0.00784314, 0.0941176, 0.168627, 1)
+position = Vector2(969.816, -105.934)
+rotation = -2.61799
+scale = Vector2(415.951, 681.62)
+texture = SubResource("CanvasTexture_iq1of")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.00784314, 0.0941176, 0.168627, 1)
+position = Vector2(-519.5, 730.5)
+scale = Vector2(435, 469)
+texture = SubResource("CanvasTexture_36ycx")
