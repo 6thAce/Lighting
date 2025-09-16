@@ -54,7 +54,7 @@ position = Vector2(-341, 757)
 rotation = -1.55509
 
 [node name="tile10" parent="." instance=ExtResource("1_t4gw0")]
-position = Vector2(-303, 166)
+position = Vector2(-188, 53)
 rotation = -0.837758
 
 [node name="tile11" parent="." instance=ExtResource("1_t4gw0")]
@@ -68,8 +68,8 @@ texture = SubResource("CanvasTexture_t4gw0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.00784314, 0.0941176, 0.168627, 1)
-position = Vector2(180.5, -20.3438)
-scale = Vector2(687, 224.688)
+position = Vector2(180.5, -82.5)
+scale = Vector2(687, 349)
 texture = SubResource("CanvasTexture_tuaf8")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]

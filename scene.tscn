@@ -7,7 +7,7 @@
 polygon = PackedVector2Array(-130, 576, 1439, 582, 1441, 675, 1444, 954.667, -137.333, 982.667, -569.333, 976, -573.333, 513.333, -542.667, 531, -542.667, 434, -129.333, 436)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nxogm"]
-polygon = PackedVector2Array(-232, 210, -163, 274, -85, 191, 303, 190, 690, 141, 680, 48, 690.667, -122.667, 6.66666, -120, 9.33331, -50.6667)
+polygon = PackedVector2Array(-114.667, 98.6667, -114.667, 192, -85, 191, 303, 190, 688, 142.667, 680, 48, 688, -236, 2.66666, -240, 9.33331, -50.6667)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3253y"]
 polygon = PackedVector2Array(760, 148, 804, 65, 1121.33, -481.333, 1478.67, -284, 1816, -134.667, 1820, 328, 1133, 340, 1116, 330)
@@ -87,7 +87,7 @@ polygon = PackedVector2Array(-224, -2, -220, 67, 21, 65, 18, 313, 87, 314, 91, 1
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(533, -302)
 build_mode = 1
-polygon = PackedVector2Array(-135, 162, -85, 208, -23, 146, 260, 146, 558, 111, 549, 36, 249, 79, 43, 77, 130, -21, 75, -73)
+polygon = PackedVector2Array(41, -27, -44, 78, -42, 147, 260, 146, 558, 111, 549, 36, 554, -176, 45, -178)
 
 [node name="CollisionShape2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(1382, -285)
