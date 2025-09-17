@@ -106,3 +106,7 @@ polygon = PackedVector2Array(-206, 36, -238, 98, 46, 243, 112, 242, 114, -73, 43
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nxogm")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
+color = Color(1, 1, 1, 0.309804)

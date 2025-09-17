@@ -16,10 +16,10 @@
 position = Vector2(196, -75)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -743.0
-offset_top = -134.0
-offset_right = 1327.0
-offset_bottom = 851.0
+offset_left = -960.0
+offset_top = -592.0
+offset_right = 2353.0
+offset_bottom = 1121.0
 color = Color(0.364706, 0.364706, 0.364706, 0.596078)
 
 [node name="tile" parent="." instance=ExtResource("1_t4gw0")]
