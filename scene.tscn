@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://o7jfbb7oipr0"]
+[gd_scene load_steps=12 format=3 uid="uid://o7jfbb7oipr0"]
 
 [ext_resource type="PackedScene" uid="uid://8hchqirgpejc" path="res://bg.tscn" id="1_ulcgi"]
 [ext_resource type="PackedScene" uid="uid://c2xegl4eys6ia" path="res://player.tscn" id="2_nxogm"]
@@ -29,6 +29,16 @@ fill_from = Vector2(0.0733945, 0.541284)
 fill_to = Vector2(0.866973, 0.206422)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nxogm"]
+
+[sub_resource type="Environment" id="Environment_nxogm"]
+background_mode = 3
+tonemap_mode = 3
+tonemap_exposure = 0.6
+tonemap_white = 1.8
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.2
+glow_bloom = 0.5
 
 [node name="Scene" type="Node2D"]
 position = Vector2(219, 141)
@@ -62,7 +72,7 @@ texture = SubResource("GradientTexture2D_nxogm")
 texture_scale = 4.33
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(619, 11)
+position = Vector2(606, -10)
 scale = Vector2(16.0049, 30.7512)
 color = Color(0.917647, 0.921569, 0.929412, 1)
 energy = 3.17
@@ -93,3 +103,6 @@ polygon = PackedVector2Array(41, -27, -44, 78, -42, 147, 260, 146, 558, 111, 549
 position = Vector2(1382, -285)
 build_mode = 1
 polygon = PackedVector2Array(-206, 36, -238, 98, 46, 243, 112, 242, 114, -73, 43, -73, 42, 165, -206, 35)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nxogm")
