@@ -25,4 +25,4 @@ shape = SubResource("CapsuleShape2D_4flbx")
 occluder = SubResource("OccluderPolygon2D_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(2, 2)
