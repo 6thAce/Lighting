@@ -105,7 +105,7 @@ build_mode = 1
 polygon = PackedVector2Array(14, -20, 186, -222, 490, -153)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(489, -167, 133, -177, 167, 38, 1, -211, 574, -711, 2027, -709, 2157, 362, 1638, 145, 1936, -60, 1158, -182)
+polygon = PackedVector2Array(516, -165, 327, -309, 133, -177, 167, 38, 1, -211, 574, -711, 2027, -709, 2157, 362, 1638, 145, 1645, -43, 1426, -36, 1158, -182)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nxogm")
