@@ -102,7 +102,10 @@ polygon = PackedVector2Array(41, -27, -44, 78, -42, 147, 260, 146, 558, 111, 549
 [node name="CollisionShape2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(1382, -285)
 build_mode = 1
-polygon = PackedVector2Array(-206, 36, -238, 98, 46, 243, 112, 242, 114, -73, 43, -73, 42, 165, -206, 35)
+polygon = PackedVector2Array(14, -20, 186, -222, 490, -153)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(489, -167, 133, -177, 167, 38, 1, -211, 574, -711, 2027, -709, 2157, 362, 1638, 145, 1936, -60, 1158, -182)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nxogm")
